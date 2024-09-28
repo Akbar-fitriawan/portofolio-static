@@ -1,3 +1,8 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 class Config:
-    SECRET_KEY = 'mIlwmAjkeYMADlqncnksnDGJaideqo9891yt8t1u8613jb1k'
-    DEBUG = True  # Set to False in production
+    SECRET_KEY = os.getenv('SECRET_KEY')
+    DEBUG=True
