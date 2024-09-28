@@ -1,0 +1,25 @@
+{
+  "name": "website_portofolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akbar-fitriawan/portofolio-static.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akbar-fitriawan/portofolio-static/issues"
+  },
+  "homepage": "https://github.com/Akbar-fitriawan/portofolio-static#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13"
+  },
+  "scripts": {
+    "build:css": "tailwindcss build src/tailwind.css -o app/static/css/style.css"
+  }
+}
