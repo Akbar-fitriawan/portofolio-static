@@ -27,5 +27,8 @@
     "build:css": "tailwindcss build src/tailwind.css -o app/static/css/style.css",
     "start": "node index.js",
     "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "flowbite": "^2.5.2"
   }
 }
