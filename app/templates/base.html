@@ -2,123 +2,54 @@
 <html lang="en">
   <head>
     {% block head %}
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title %} {% endblock %} - My Webpage</title>
+    <title>{% block title %}{% endblock %}</title>
     <link
       rel="stylesheet"
       href="{{url_for('static',filename='dist/css/output.css')}}"
     />
+
     {% endblock %}
   </head>
   <body>
-    <button
-      data-drawer-target="default-sidebar"
-      data-drawer-toggle="default-sidebar"
-      aria-controls="default-sidebar"
-      type="button"
-      class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-    >
-      <span class="sr-only">Open sidebar</span>
-      <svg
-        class="w-6 h-6"
-        aria-hidden="true"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          clip-rule="evenodd"
-          fill-rule="evenodd"
-          d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
-        ></path>
-      </svg>
-    </button>
+    <!-- navbar -->
 
-    <!-- Navbar -->
-    <nav
-      id="default-sidebar"
-      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
-      aria-label="Sidebar"
-    >
-      <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-        <div id="logo" class="my-6 p-4">
-          <a
-            href="/"
-            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-          >
-            <span class="font-medium text-center m-auto px-5">
-              <strong class="text-lg text-gray-900">Akbar</strong>
-              <i class="text-sky-700">Fitriawan</i>
-            </span>
-          </a>
-          <hr
-            class="w-28 h-1 mx-auto my-4 bg-gray-100 mt-2 border-0 rounded md:my-8 dark:bg-gray-900"
-          />
-        </div>
+    {% include "snippets/navbar.html" %}
+    <!-- end navbar -->
 
-        <ul class="space-y-2 font-medium text-center">
-          {% for link in nav_links %}
-          <li>
-            <a
-              href="{{ url_for(link.url) }}"
-              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-            >
-              <span class="flex-1 ms-3 whitespace-nowrap">{{ link.name }}</span>
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-        <hr
-          class="w-28 h-1 mx-auto my-4 bg-gray-100 mt-2 border-0 rounded md:my-8 dark:bg-gray-900"
-        />
-      </div>
-    </nav>
+    <!-- hero_saction -->
+    {% block hero_saction %} {% endblock %}
+    <!-- end hero_saction -->
 
-    <div id="content" class="p-4 sm:ml-64">
-      <div
-        class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700"
-      >
-        {% block content %} {% endblock %}
-      </div>
+    <!-- about -->
+    {% block about_section %} {% endblock %}
+    <!-- end about -->
 
-      {% block footer %}
+    <!-- services -->
+    {% block services %} {% endblock %}
+    <!-- end services -->
 
-      <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
-        <div class="container mx-auto flex flex-col items-center">
-          <div class="flex space-x-4 mb-4">
-            <a href="https://twitter.com" target="_blank">
-              <i class="fab fa-twitter text-white hover:text-blue-500"></i>
-            </a>
-            <a href="https://facebook.com" target="_blank">
-              <i class="fab fa-facebook text-white hover:text-blue-500"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank">
-              <i class="fab fa-linkedin text-white hover:text-blue-500"></i>
-            </a>
-            <a href="https://dribbble.com" target="_blank">
-              <i class="fab fa-dribbble text-white hover:text-pink-500"></i>
-            </a>
-            <a href="https://github.com" target="_blank">
-              <i class="fab fa-github text-white hover:text-gray-500"></i>
-            </a>
-          </div>
-          <!-- Copyright text -->
-          <p class="text-center text-sm">
-            Copyright &copy; {{ current_year }}
-            <a href="/" class="text-pink-500">{{owner_name}}</a>. All Rights
-            Reserved.
-          </p>
+    <!-- portfolio -->
+    {% block portfolio %} {% endblock %}
+    <!-- end portfolio -->
 
-          <!-- Links to terms and policy -->
-          <div class="flex space-x-4 text-sm mt-2 py-3 mx-auto mb-2">
-            <a href="#" class="hover:underline">Terms & Policy</a>
-            <a href="#" class="hover:underline">Disclaimer</a>
-          </div>
-        </div>
-      </footer>
-      {% endblock %}
-    </div>
+    <!-- blog -->
+    {% block blog %} {% endblock %}
+    <!-- end blog -->
+
+    <!-- contact -->
+
+    {% block contact %} {% endblock %}
+    <!-- end contact -->
+
+    <!-- footer -->
+    {% include "snippets/footer.html" %}
+
+    <!-- end footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
   </body>
 </html>
