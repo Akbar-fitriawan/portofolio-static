@@ -16,34 +16,11 @@
   </head>
   <body>
     <!-- navbar -->
-
     {% include "snippets/navbar.html" %}
+
     <!-- end navbar -->
 
-    <!-- hero_saction -->
-    {% block hero_saction %} {% endblock %}
-    <!-- end hero_saction -->
-
-    <!-- about -->
-    {% block about_section %} {% endblock %}
-    <!-- end about -->
-
-    <!-- services -->
-    {% block services %} {% endblock %}
-    <!-- end services -->
-
-    <!-- portfolio -->
-    {% block portfolio %} {% endblock %}
-    <!-- end portfolio -->
-
-    <!-- blog -->
-    {% block blog %} {% endblock %}
-    <!-- end blog -->
-
-    <!-- contact -->
-
-    {% block contact %} {% endblock %}
-    <!-- end contact -->
+    {% block content %} {% endblock %}
 
     <!-- footer -->
     {% include "snippets/footer.html" %}
