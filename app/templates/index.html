@@ -10,20 +10,20 @@ content %}
 <!-- end about -->
 
 <!-- services -->
-{% block services %} {% endblock %}
+{% block services %} {% include 'services.html' %}{% endblock %}
 <!-- end services -->
 
 <!-- portfolio -->
-{% block portfolio %} {% endblock %}
+{% block portfolio %} {% include 'portfolio.html' %}{% endblock %}
 <!-- end portfolio -->
 
 <!-- blog -->
-{% block blog %} {% endblock %}
+{% block blog %} {% include 'blog.html' %} {% endblock %}
 <!-- end blog -->
 
 <!-- contact -->
 
-{% block contact %} {% endblock %}
+{% block contact %} {% include 'contact.html' %} {% endblock %}
 <!-- end contact -->
 
 {% endblock %}
