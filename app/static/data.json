@@ -1,0 +1,79 @@
+{
+  "personal_details": {
+    "name": "Akbar Fitriawan",
+    "birth_date": "27, Desember 2000",
+    "residence": "Jakarta Selatan",
+    "email": "akbarfitriawan12@gmail.com",
+    "phone": "+6285156919521",
+    "status": "Available"
+  },
+
+  "certificates": [
+    {
+      "title": "Build LookML Objects in Looker Skill Badge",
+      "organization": "Google Cloud",
+      "date": "September 12, 2024",
+      "url": "https://www.credly.com/badges/1171a0de-8484-4008-859f-d926176ce5b7/public_url"
+    },
+    {
+      "title": "Create ML Models with BigQuery ML Skill Badge",
+      "organization": "Google Cloud",
+      "date": "September 10, 2024",
+      "url": "https://www.credly.com/badges/d6f1a098-d230-4e79-84f0-a3e5188223f6/public_url"
+    },
+    {
+      "title": "Perform Predictive Data Analysis in BigQuery Skill Badge",
+      "organization": "Google Cloud",
+      "date": "September 09, 2024",
+      "url": "https://www.credly.com/badges/89ee35c4-a7f4-4e5c-8b89-cc90d7e0a234/public_url"
+    },
+    {
+      "title": "Analyze Sentiment with Natural Language API Skill Badge",
+      "organization": "Google Cloud",
+      "date": "September 09, 2024",
+      "url": "https://www.credly.com/badges/6e02f233-a350-487c-a050-e080da007b1d/public_url"
+    },
+    {
+      "title": "Analyze Images with the Cloud Vision API Skill Badge",
+      "organization": "Google Cloud",
+      "date": "September 09, 2024",
+      "url": "https://www.credly.com/badges/ad53726a-0f8e-41ec-8fcc-c91c3530be2d/public_url"
+    },
+    {
+      "title": "Analyze Speech and Language with Google APIs Skill Badge",
+      "organization": "Google Cloud",
+      "date": "September 08, 2024",
+      "url": "https://www.credly.com/badges/4e646c42-e078-4912-93bb-8f71d0b9c710/public_url"
+    },
+    {
+      "title": "Classify Images with TensorFlow on Google Cloud",
+      "organization": "Google Cloud",
+      "date": "September 08, 2024",
+      "url": "https://www.credly.com/badges/56eccf73-2729-4a2b-9c8b-48f6d8c95669/public_url"
+    },
+    {
+      "title": "Hacktiv8 Bootcamp Data Science",
+      "organization": "Hacktiv8",
+      "date": "June 07, 2024",
+      "url": "https://drive.google.com/file/d/1iXlhAwUlVkL2Ad2veH7bltP8aWoRk7aa/view?usp=sharing",
+      "transcript": "https://drive.google.com/file/d/1YYCTPprooE0GfpjhnVjlRfav5Q7szDvb/view?usp=drive_link"
+    }
+  ],
+  "educations": [
+    {
+      "educt_title": "Hacktive8 Bootcamp Data Science",
+      "date": "February 2024 - June 2024",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel enim cumque officiis?"
+    },
+    {
+      "educt_title": "Mini Bootcamp Web Developer",
+      "date": "September 2023 - Oktober 2023",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel enim cumque officiis?"
+    },
+    {
+      "educt_title": "High School - SMKN 1 Palasah",
+      "date": "2016 - 2019",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel enim cumque officiis?"
+    }
+  ]
+}
