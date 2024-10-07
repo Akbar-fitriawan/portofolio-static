@@ -1,0 +1,233 @@
+<section id="about" class="py-16 bg-gray-100">
+  <div class="container">
+    <h2 class="text-4xl font-bold text-center text-teal-600 mb-10">About Me</h2>
+
+    <div class="flex flex-wrap">
+      <!-- Description -->
+      <div class="w-full md:w-1/2 px-4 py-3">
+        <h3 class="text-2xl font-semibold text-slate-600 mb-8">
+          // Background
+        </h3>
+        <p class="text-lg text-gray-700 mb-4 md:px-6">
+          Hi, I'm <strong>Akbar Fitriawan</strong>, an aspiring Data Scientist
+          with a passion for Python programming and machine learning. I enjoy
+          solving problems with data and am continually learning new tools and
+          techniques in this rapidly growing field.
+        </p>
+        <p class="text-lg text-gray-700 mb-4 md:px-6">
+          I’ve worked on several personal projects, where I built predictive
+          models and explored data visualization. Currently, I am focusing on
+          enhancing my skills through online courses and real-world practice.
+        </p>
+        <p class="text-lg text-gray-700 mb-4 md:px-6">
+          My goal is to apply my growing expertise to meaningful data-driven
+          projects and continue my journey in the world of data science.
+        </p>
+      </div>
+
+      <div class="w-full md:w-1/2 px-4 py-3">
+        <h3 class="text-2xl font-semibold text-slate-600 mb-8">
+          // Personal Details
+        </h3>
+        <ul class="list-none space-y-2">
+          <li class="flex flex-wrap">
+            <span class="w-36 font-semibold text-gray-500">Nama:</span
+            ><span>{{ personal_details.name}} </span>
+          </li>
+          <li class="flex flex-wrap">
+            <span class="w-36 font-semibold text-gray-500">Tanggal Lahir:</span
+            ><span>{{personal_details.birth_date}}</span>
+          </li>
+          <li class="flex flex-wrap">
+            <span class="w-36 font-semibold text-gray-500">Domisili:</span>
+            <span>{{personal_details.residence}}</span>
+          </li>
+          <li class="flex flex-wrap">
+            <span class="w-36 font-semibold text-gray-500">Email:</span>
+            <span>{{personal_details.email}}</span>
+          </li>
+          <li class="flex flex-wrap">
+            <span class="w-36 font-semibold text-gray-500">Telephone:</span>
+            <span>{{personal_details.phone}}</span>
+          </li>
+          <li class="flex flex-wrap">
+            <span class="w-36 font-semibold text-gray-500">Freelance:</span>
+            <span>{{personal_details.status}}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="h-px my-8 bg-gray-200" />
+
+    <div class="flex flex-wrap">
+      <div class="w-full md:w-1/2 px-4 py-3">
+        <h3 class="text-2xl font-semibold text-slate-600 mb-8">// Skills</h3>
+        <ul class="list-disc list-inside space-y-4 text-gray-700">
+          <li>
+            <strong>Python Programming:</strong> Proficient in Python for data
+            analysis, automation, and machine learning.
+          </li>
+          <li>
+            <strong>Data Analysis:</strong> Experience in data wrangling,
+            exploration, and visualization using Pandas, NumPy, and Matplotlib.
+          </li>
+          <li>
+            <strong>Machine Learning:</strong> Skilled in building
+            classification, regression models, and working with Scikit-learn and
+            XGBoost.
+          </li>
+          <li>
+            <strong>Data Visualization:</strong> Able to create insightful
+            visualizations using Matplotlib, Seaborn, and Plotly.
+          </li>
+          <li>
+            <strong>SQL and Database Management:</strong> Competent in SQL for
+            querying and managing relational databases.
+          </li>
+          <li>
+            <strong>Version Control:</strong> Experienced with Git for version
+            control and collaborative development.
+          </li>
+          <li>
+            <strong>Web Scraping:</strong> Familiar with web scraping tools like
+            BeautifulSoup and Playwright for data extraction.
+          </li>
+          <li>
+            <strong>Data Pipelines:</strong> Knowledge of ETL processes and
+            automating data workflows using Python.
+          </li>
+        </ul>
+      </div>
+      <div class="w-full md:w-1/2 px-4 py-3">
+        <h3 class="text-2xl font-semibold text-slate-600 mb-8">
+          // Certificate
+        </h3>
+
+        <ul class="list-none space-y-4 text-gray-700">
+          {% for cert in certificates %}
+          <li class="flex flex-wrap justify-between items-center">
+            <div>
+              <h3 class="font-semibold text-gray-800">{{cert.title}}</h3>
+              <p class="text-sm text-gray-600">
+                {{cert.organization}} - {{cert.date}}
+              </p>
+              {% if cert.transcript %}
+              <a
+                href="{{ cert.transcript }}"
+                target="_blank"
+                class="text-blue-600 hover:underline"
+                >Transcript</a
+              >
+              {% endif %}
+            </div>
+            <a
+              href="{{cert.url}}"
+              target="_blank"
+              class="inline-flex font-medium items-center text-blue-600 hover:underline"
+              >View
+              <svg
+                class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 18 18"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"
+                />
+              </svg>
+            </a>
+          </li>
+
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <hr class="h-px my-8 bg-gray-200" />
+
+    <div class="flex flex-wrap">
+      <div class="w-full md:w-1/2 px-4 py-3">
+        <h3 class="text-2xl font-semibold text-slate-600 mb-8">// Education</h3>
+
+        <ol class="relative border-s border-gray-200 dark:border-gray-700">
+          {% for educt in educations %}
+          <li class="mb-10 ms-4">
+            <div
+              class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+            ></div>
+            <time
+              class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+              >{{educt.date}}</time
+            >
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              {{educt.educt_title}}
+            </h3>
+            <p
+              class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"
+            >
+              {{educt.description}}
+            </p>
+          </li>
+
+          {% endfor %}
+        </ol>
+      </div>
+      <div class="w-full md:w-1/2 px-4 py-3">
+        <h3 class="text-2xl font-semibold text-slate-600 mb-8">
+          // Experience
+        </h3>
+
+        <ol class="relative border-s border-gray-200 dark:border-gray-700">
+          <li class="mb-10 ms-4">
+            <div
+              class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+            ></div>
+            <time
+              class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+              >2022 - 2023</time
+            >
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Usaha Mandiri
+            </h3>
+            <p
+              class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"
+            >
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Accusamus, repudiandae? Sequi, est.
+            </p>
+          </li>
+          <li class="mb-10 ms-4">
+            <div
+              class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+            ></div>
+            <time
+              class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+              >Agustus 2020 - Mei 2021</time
+            >
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Koordinator Operasional Suplai
+            </h3>
+            <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+              aliquid at quisquam.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="flex justify-center my-8">
+      <a
+        href="/"
+        class="bg-slate-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-indigo-700 transition duration-300 ease-in-out"
+        >Download CV</a
+      >
+    </div>
+  </div>
+</section>

@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template
+from utils import load_json_data
 
 from datetime import datetime
 
@@ -9,7 +10,8 @@ main_bp = Blueprint('main', __name__)
 def inject_globals():
     return {
         'current_year': datetime.now().year,
-        'owner_name': "Akbar Fitriawan"
+        'owner_name': "Akbar Fitriawan",
+
     }
 
 
@@ -18,37 +20,22 @@ def inject_globals():
 def home():
 
     nav_links = [
-        {'name': 'home', 'url': 'home'},
+        {'name': 'Home', 'url': 'home'},
         {'name': 'About', 'url': 'about'},
         {'name': 'Services', 'url': 'services'},
         {'name': 'Portfolio', 'url': 'portfolio'},
+        {'name': 'Blog', 'url': 'blog'},
         {'name': 'Contact', 'url': 'contact'}
     ]
+    data = load_json_data('./app/static/data.json')
+    
+
     
     return render_template(
         'index.html',
-        nav_links=nav_links
-        )
+        nav_links=nav_links,
+        personal_details=data['personal_details'], 
+        certificates=data['certificates'],
+        educations=data['educations'])
 
-# @main_bp.route('/about')
-# def about():
-    
-#     return render_template('about.html', name="About")
-
-# @main_bp.route('/services')
-# def services():
-#     return render_template('services.html', name="Services")
-
-
-# @main_bp.route('/portfolio')
-# def portfolio():
-#     return render_template('portfolio.html', name="Portfolio")
-
-# @main_bp.route('/blog')
-# def blog():
-#     return render_template('blog.html', name="Blog")
-
-# @main_bp.route('/contact')
-# def contact():
-#     return render_template('contact.html', name="Contact")
 
