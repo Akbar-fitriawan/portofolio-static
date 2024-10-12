@@ -8,9 +8,9 @@
       </div>
 
       <div class="w-full flex flex-wrap">
-        <div class="mb-12 p-4 md:w-1/2 mx-auto">
+        <div class="mb-12 justify-center md:w-1/2 mx-auto px-8">
           <h3 class="font-semibold text-xl py-4">Get in Touch</h3>
-          <p class="font-medium text-base mb-5">
+          <p class="font-medium text-base mb-5 w-full lg:w-1/2">
             Fill out the form below to get in touch with me. I'm always excited
             to hear about new opportunities and I'll do my best to respond to
             your inquiry within 24 hours.
@@ -43,7 +43,10 @@
                 />
               </svg>
             </span>
-            <p>Jakarta Selatan, Indonesia</p>
+            <p class="w-full lg:w-1/2">
+              Jl. Jaha Gg. Sa'ian RT 09 RW 01, Cilandak Timur, Jakarta Selatan
+              Indonesia
+            </p>
           </div>
 
           <div class="flex items-center space-x-3 py-3">
@@ -172,6 +175,73 @@
               </svg>
             </a>
           </div>
+        </div>
+        <div class="w-full mb-12 p4 lg:w-1/2 mx-auto">
+          <form>
+            <div class="grid gap-2 mb-6 md:grid-cols-2">
+              <div>
+                <label
+                  for="name"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="John Doe"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="john.doe@example.com"
+                  required
+                />
+              </div>
+            </div>
+            <div class="mb-6">
+              <label
+                for="subject"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Subject</label
+              >
+              <input
+                type="text"
+                id="email"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Your Subject"
+                required
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                for="message"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Your message</label
+              >
+              <textarea
+                id="message"
+                rows="4"
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Write your thoughts here..."
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </div>
