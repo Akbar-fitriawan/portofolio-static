@@ -27,6 +27,7 @@
       "date": "September 09, 2024",
       "url": "https://www.credly.com/badges/89ee35c4-a7f4-4e5c-8b89-cc90d7e0a234/public_url"
     },
+
     {
       "title": "Analyze Sentiment with Natural Language API Skill Badge",
       "organization": "Google Cloud",
@@ -59,21 +60,35 @@
       "transcript": "https://drive.google.com/file/d/1YYCTPprooE0GfpjhnVjlRfav5Q7szDvb/view?usp=drive_link"
     }
   ],
+
   "educations": [
     {
       "educt_title": "Hacktive8 Bootcamp Data Science",
       "date": "February 2024 - June 2024",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel enim cumque officiis?"
+      "description": "I completed a 4-month intensive bootcamp covering data analytics, machine learning, problem solving, data scheduling, and data quality assurance and validation, with a focus on real-world applications to prepare me as a data science expert ready to tackle industry challenges."
     },
     {
-      "educt_title": "Mini Bootcamp Web Developer",
+      "educt_title": "Skilvul Mini Bootcamp Web Developer",
       "date": "September 2023 - Oktober 2023",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel enim cumque officiis?"
+      "description": "I participated in the Skilvul Mini Bootcamp Web Developer, where I learned the fundamentals of web development, including HTML, CSS, JavaScript, and modern web frameworks. This bootcamp focused on practical skills for developing responsive and dynamic web applications."
     },
     {
-      "educt_title": "High School - SMKN 1 Palasah",
+      "educt_title": "Vocational School - SMKN 1 Palasah",
       "date": "2016 - 2019",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel enim cumque officiis?"
+      "description": "I attended SMKN 1 Palasah majoring in Computer and Network Engineering, where I gained foundational knowledge in networking, web servers, and programming algorithms. I also developed practical skills in network configuration, troubleshooting, and server management, essential for the IT industry."
+    }
+  ],
+
+  "experiance": [
+    {
+      "exp_title": "Self-employed",
+      "exp_date": "2022 - 2023",
+      "exp_description": "I am an entrepreneur in the food industry by operating a Korean street food business. I manage all aspects of the business, from menu development to customer service and marketing, to ensure high quality and a unique experience for customers."
+    },
+    {
+      "exp_title": "Supply - Operational Production",
+      "exp_date": "November 2019 - Mei 2021",
+      "exp_description": "In 2019, I worked at PT Sari Tani Pemuka as Supply - Operational Production. In this role, I was responsible for managing the supply chain and ensuring the smooth operation of production processes. My tasks included coordinating the procurement of raw materials, monitoring inventory levels, and optimizing production schedules to meet demand."
     }
   ]
 }
