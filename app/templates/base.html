@@ -1,18 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
   <head>
     {% block head %}
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}{% endblock %} Afitriawan - Portfolio</title>
     <link
       rel="stylesheet"
       href="{{url_for('static',filename='dist/css/output.css')}}"
     />
-
     {% endblock %}
+    <script>
+      if (
+        localStorage.getItem("dark-mode") === "true" ||
+        (!("dark-mode" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.querySelector("html").classList.add("dark");
+      } else {
+        document.querySelector("html").classList.remove("dark");
+      }
+    </script>
   </head>
   <body>
     <!-- navbar -->
@@ -26,7 +36,37 @@
     {% include "snippets/footer.html" %}
 
     <!-- end footer -->
+
+    <!-- back to top -->
+    <a
+      href="#home"
+      class="flex justify-center items-center fixed bottom-4 right-4 z-[9999] h-12 w-12 p-4 bg-teal-600 rounded-full hover:animate-bounce"
+      id="to-top"
+    >
+      <span class="flex items-center justify-center">
+        <svg
+          class="w-7 h-7 text-white dark:text-white"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.8"
+            d="m16 17-4-4-4 4m8-6-4-4-4 4"
+          />
+        </svg>
+      </span>
+    </a>
+    <!-- end back to top -->
+
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
     <script src="{{ url_for('static', filename='dist/js/script.js') }}"></script>
   </body>
 </html>
