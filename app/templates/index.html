@@ -1,5 +1,5 @@
-{% extends "base.html" %} {% block title %}{{ name }}{% endblock %} {% block
-content %}
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
 
 <!-- hero_saction -->
 {% block hero_saction %} {% include 'snippets/hero_section.html' %} {% endblock
@@ -26,4 +26,32 @@ content %}
 
 {% block contact %} {% include 'snippets/contact.html' %} {% endblock %}
 <!-- end contact -->
+
+<!-- back to top -->
+<a
+  href="#home"
+  class="flex justify-center items-center fixed bottom-4 right-4 z-[9999] h-12 w-12 p-4 bg-teal-600 rounded-full hover:animate-bounce"
+  id="to-top"
+>
+  <span class="flex items-center justify-center">
+    <svg
+      class="w-7 h-7 text-white dark:text-white"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.8"
+        d="m16 17-4-4-4 4m8-6-4-4-4 4"
+      />
+    </svg>
+  </span>
+</a>
+<!-- end back to top -->
 {% endblock %}

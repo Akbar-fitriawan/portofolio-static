@@ -11,7 +11,7 @@
       rel="stylesheet"
       href="{{url_for('static',filename='dist/css/output.css')}}"
     />
-    {% endblock %}
+
     <script>
       if (
         localStorage.getItem("dark-mode") === "true" ||
@@ -23,6 +23,7 @@
         document.querySelector("html").classList.remove("dark");
       }
     </script>
+    {% endblock %}
   </head>
   <body>
     <!-- navbar -->
@@ -38,7 +39,7 @@
     <!-- end footer -->
 
     <!-- back to top -->
-    <a
+    <!-- <a
       href="#home"
       class="flex justify-center items-center fixed bottom-4 right-4 z-[9999] h-12 w-12 p-4 bg-teal-600 rounded-full hover:animate-bounce"
       id="to-top"
@@ -62,7 +63,7 @@
           />
         </svg>
       </span>
-    </a>
+    </a> -->
     <!-- end back to top -->
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
