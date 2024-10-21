@@ -40,7 +40,7 @@
             {% for link in nav_links %}
             <li class="group">
               <a
-                href="#{{ link.url }}"
+                href="{% if request.path == '/' or request.path == '/home' %}#{{ link.url }}{% else %}/{{ link.url }}{% endif %}"
                 class="text-base text-slate-700 py-2 mx-8 group-hover:text-teal-700 flex dark:text-white"
                 >{{ link.name }}</a
               >
