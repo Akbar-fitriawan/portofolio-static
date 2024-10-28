@@ -1,7 +1,6 @@
 from flask import Flask
 from os import path
 from flask_sqlalchemy import SQLAlchemy
-
 from .extensions import init_extensions, db, login_manager
 from app.auth.models import User
 
@@ -31,7 +30,7 @@ def create_app():
 
     # Konfigurasi LoginManager
     login_manager.login_view = 'auth.login'  # URL untuk login
-    login_manager.session_protection = 'strong'  # Perlindungan sesi
+    # login_manager.session_protection = 'strong'  # Perlindungan sesi
     
     @login_manager.user_loader
     def load_user(user_id):
@@ -47,5 +46,7 @@ def create_db(app):
         with app.app_context():  # Pastikan kita berada di dalam konteks aplikasi
             db.create_all()  # Panggil create_all tanpa argumen app
         print("Created Database!")
+    else:
+        print("Database alraedy exsist..")
 
 

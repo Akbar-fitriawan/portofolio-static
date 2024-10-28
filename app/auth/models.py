@@ -8,7 +8,7 @@ class User(db.Model, UserMixin):
     __tablename__ = 'users' # nama tabel
 
     id = db.Column(db.Integer, primary_key=True) # id pengguna
-    username = db.Column(db.String(50), unique=True, nullable=False) # username
+    name = db.Column(db.String(50), unique=True, nullable=False) # username
     email = db.Column(db.String(50), unique=True, nullable=False)  # email
     password = db.Column(db.String(256), nullable=False) # hash password
     date_created = db.Column(db.DateTime(timezone=True), default=func.now())

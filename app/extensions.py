@@ -1,4 +1,4 @@
-from flask_wtf.csrf import CSRFProtect
+# from flask_wtf.csrf import CSRFProtect
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_mail import Mail
@@ -9,7 +9,7 @@ from flask_admin import Admin
 # Inisialisasi ekstensi Flask
 
 # CSRF protection
-csrf = CSRFProtect()
+# csrf = CSRFProtect()
 
 # Database ORM (SQLAlchemy)
 db = SQLAlchemy()
@@ -28,7 +28,7 @@ admin = Admin(template_mode='bootstrap4')
 
 # Fungsi untuk menginisialisasi semua ekstensi
 def init_extensions(app):
-    csrf.init_app(app)
+    # csrf.init_app(app)
     db.init_app(app)
     migrate.init_app(app, db)
     mail.init_app(app)
