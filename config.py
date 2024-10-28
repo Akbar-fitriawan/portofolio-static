@@ -1,9 +1,9 @@
 import os
-from os import path
+# from os import path
 from dotenv import load_dotenv
 
 # Memuat variabel dari file .env
-load_dotenv()
+load_dotenv(".env")
 
 
 class Config:
